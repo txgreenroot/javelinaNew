@@ -1,0 +1,254 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+    padding: 8px 16px;
+    border: 2px solid #2b2b2b;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.reserve-button {
+    background-color: #b62222;
+    color: #fff;
+    padding: 10px 22px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.reserve-inline {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.banner {
+    text-align: center;
+    padding: 48px 20px 24px;
+    background-color: #f5f2ee;
+}
+
+.banner h2 {
+    font-size: 2.4em;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+}
+
+.hero-section {
+    padding: 0;
+    margin: 0;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+}
+
+.content-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.content-section.alt .text-content {
+    order: 2;
+}
+
+.content-section.alt .image-content {
+    order: 1;
+}
+
+.content-section img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.content-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 12px;
+    font-family: "Playfair Display", serif;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+    color: #8a7f72;
+    margin: 0 0 6px;
+}
+
+.sunset-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.sunset-content {
+    margin-bottom: 20px;
+}
+
+.sunset-image img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 6px;
+    margin: 0 auto;
+    display: block;
+}
+
+.gallery-section,
+.faqs-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-section h2,
+.faqs-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        column-count: 1;
+    }
+}
+
+.gallery-grid img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+    display: block;
+    break-inside: avoid;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+.faq-item h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-section.alt .text-content,
+    .content-section.alt .image-content {
+        order: initial;
+    }
+    
+    .main-nav {
+        gap: 8px;
+    }
+    
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 0.75em;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+.social-links a {
+    margin-right: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
