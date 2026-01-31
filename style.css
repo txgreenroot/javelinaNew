@@ -201,8 +201,27 @@ header h1 {
 }
 
 .faq-item p {
-    margin: 0;
+    margin: 0 0 10px 0;
     line-height: 1.7;
+}
+
+.faq-item ul {
+    margin: 10px 0;
+    padding-left: 25px;
+}
+
+.faq-item li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.faq-item a {
+    color: #b62222;
+    text-decoration: none;
+}
+
+.faq-item a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
